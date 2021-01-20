@@ -1,6 +1,6 @@
 # install dependencies
 
-npm install
+npm i
 
 # compile scss to css
 
