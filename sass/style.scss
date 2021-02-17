@@ -1,16 +1,94 @@
+%font-shared-article {
+    font-family: 'Playfair Display', serif;
+}
+
+%font-shared-nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+    font-size: 90%;
+}
+
 .banner {
     background-image: url(../img/plates-header.jpg);
-    background-attachment: fixed;
+    background-attachment: scroll ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% auto;
 }
 
+p {
+    margin : 0.5em !important;
+}
+
+.banner-in {
+    margin : auto;
+    width: 50% ;
+    height: 300px;
+    background-color: #393935;
+    border: 0;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+}
+
+.banner-description {
+    padding: 10% 5% ;
+}
+
+.banner-title {
+    border-bottom: 1px solid white;
+    width: fit-content;
+    margin: auto;
+}
+
+.banner-text, .navbar {
+    @extend %font-shared-nav;
+}
+.banner-text {
+    font-size: small;
+}
+.nav-item {
+    font-weight:bold !important;
+    color: black;
+}
+
+
+.article-name, .article-price {
+    @extend %font-shared-article;
+    color: gray;
+}
+
+.banner-title {
+    @extend %font-shared-article;
+}
+
+
 .card-top-img {
-    height: 307px;
+    height: 17em;
     width: 100%;
 }
 
 .articles {
     margin: 0 10%;
+}
+
+svg {
+    display: none;
+}
+
+.cart {
+    display: inline;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    svg{
+        display: inline;
+    }
+
+    .cart{
+        display: none;
+    }
 }
