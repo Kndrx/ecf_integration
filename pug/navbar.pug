@@ -1,5 +1,5 @@
 body
-    nav.navbar.navbar-expand-lg.navbar-light
+    nav.navbar.navbar-expand-lg.navbar-light.border-bottom
         div.navbar-brand.order-lg-1.order-2
             img(src="../../../img/logo.png", alt="")
 
@@ -9,7 +9,7 @@ body
         div#navbarNav.collapse.navbar-collapse.order-lg-2
             ul.navbar-nav.mx-auto
                 li.nav-item.active.px-3
-                    a.nav-link(href='#') HOME
+                    a.nav-link(href='index.html') HOME
 
                 li.nav-item.px-3.dropdown
                     a.nav-link.text-dark.dropdown-toggle(href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") SHOP
@@ -33,53 +33,10 @@ body
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" (class="bi bi-bag" viewBox="0 0 16 16">
                                 <path (class="navbar-toggler" d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
                             </svg>
-                            span.cart My cart
+                            span.cart.text-uppercase My cart
                             span  (2)
                     // Dropdown du panier
                     .dropdown-menu.position-absolute.border-0.float-none
                         .row
                             .col-3
                                 img.w-100.h-100(src="../../../img/hand-painted-blue-flat-dish.jpg" alt="Image of hand painted blue flat dish" title="Hand painted blue flat dish")
-
-                    //- div.dropdown-menu.position-absolute.dropdown-menu-cart.border-0(aria-labelledby="navbarDropdownMenuLink2")
-                    //-     // Article n°1
-                    //-     div.row.mx-0.mb-5
-                    //-         // Image de l'article
-                    //-         div.col-3.p-0
-                    //-             img.w-100.h-100(src="../../../img/hand-painted-blue-flat-dish.jpg" alt="Image of hand painted blue flat dish" title="Hand painted blue flat dish")
-                    //-         // Caractéristique de l'article
-                    //-         div.col-8.pr-0
-                    //-             p.article-title Hand painted blue flat dish
-                    //-                 span.article-quantities x 1
-                    //-             p Kiriko
-                    //-             p.text-dark $28.00
-                    //-         // Action sur l'article (suppression)
-                    //-         div.col-1.p-0.text-right
-                    //-             i.fas.fa-times
-                    //-     // Article n°2
-                    //-     div.row.mx-0.my-4
-                    //-         // Image de l'article
-                    //-         div.col-3.p-0
-                    //-             img.w-100.h-100(src="../../../img/mashiko-yaki-indigo-small-plate.jpg" alt="Image of mashiko-yaki indigo small plate" title="Mashiko yaki indigo small plate")
-                    //-         // Caractéristique de l'article
-                    //-         div.col-8.pr-0
-                    //-             p.article-title Mashiko yaki indigo small plate
-                    //-                 span.quantities x 1
-                    //-             p Kiriko
-                    //-             p.text-dark $28.00
-                    //-         // Action sur l'article (suppression)
-                    //-         diV.col-1.p-0.text-right
-                    //-             i.fas.fa-times
-                    //-     // Total des articles
-                    //-     div.row.mx-0.my-4.border-top.pt-1
-                    //-         div.col-10.pl-0
-                    //-             p.font-weight-normal Total
-                    //-         div.col-2.pr-0
-                    //-             p.font-weight-normal $56.00
-                    //-     // Boutons d'actions du panier
-                    //-     div.row.mx-0.mt-4
-                    //-         div.col.p-0
-                    //-             button.btn.w-100.btn-cart
-                    //-                 a(href="cart") View cart
-                    //-         div.col.pr-0
-                    //-             button.btn.w-100 Checkout
