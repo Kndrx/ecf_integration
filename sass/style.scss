@@ -10,6 +10,40 @@ html {
     font-size: 90%;
 }
 
+.article-name, .article-price {
+    color: gray;
+}
+
+.articles {
+    margin: 0 10%;
+}
+
+.article-name, .article-desc, .article-price {
+    margin : 0.5em !important;
+}
+
+.article-cart {
+    @extend %font-shared-nav;
+    color: gray;
+}
+
+.article-desc-article{
+    border-bottom: 1px solid rgb(186,186,186);
+    margin: 0.5em !important;
+}
+
+.btn-dark {
+    border-radius: 0 !important;
+    font-size: small !important;
+    height: 3em;
+    width: 13em;
+}
+
+.btn-cart {
+    border: 1px solid black !important;
+    border-radius: 0 !important;
+}
+
 .banner {
     background-image: url(../img/plates-header.jpg);
     background-attachment: scroll ;
@@ -18,12 +52,9 @@ html {
     background-size: 100% auto;
 }
 .btn-quantity {
-    background-color: rosybrown !important;
-    margin-bottom: 2px;
+    background-color: rgb(186,186,186) !important;
+    
     border-radius: 0 !important;
-}
-.article-name, .article-desc, .article-price {
-    margin : 0.5em !important;
 }
 
 .banner-in {
@@ -46,7 +77,7 @@ html {
     margin: auto;
 }
 
-.banner-text, .navbar {
+.banner-text, .navbar, .btn-dark, .table-cart, .bread-text {
     @extend %font-shared-nav;
 }
 
@@ -56,21 +87,18 @@ html {
 .banner-text {
     font-size: small;
 }
-.nav-link {
-    font-weight:bold !important;
-    color: black !important;
-}
 
-
-.article-name, .article-price {
-    @extend %font-shared-article;
-    color: gray;
-}
-
-.banner-title,  .cart-title {
+.banner-title,  .cart-title, .article-name, .article-price, .article-name-article {
     @extend %font-shared-article;
 }
 
+.cart-title {
+    font-size: 3.5em;
+}
+
+.counter {
+    width: 30% !important;
+}
 
 .card-top-img {
     height: 17em;
@@ -94,18 +122,59 @@ html {
     opacity: 1;
 }
 
-.cart-title {
-    font-size: xxx-large;
+.card {
+    position: relative;
 }
 
-.btn-dark {
-    border-radius: 0 !important;
-    font-size: small !important;
-    height: 3em;
-    width: 13em;
-    
-    @extend %font-shared-nav;
+.cart {
+    display: inline;
 }
+
+
+.close {
+    position: absolute;
+    opacity: 0.3;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+
+.dropdown-menu {
+    left: -250% !important;
+    margin-right: 5% !important;
+    border-radius: 0 !important;
+}
+
+.nav-link, .bread-text {
+    font-weight:bold !important;
+    color: black !important;
+}
+
+.nb-article {
+    background-color: rgb(232, 232, 232);
+    width: 100%;
+    padding: 17px;
+}
+
+.number {
+    position: relative;
+    top: 10%;
+}
+
 
 .middle {
     transition: .5s ease;
@@ -118,63 +187,27 @@ html {
     text-align: center;
 }
 
-.card {
-    position: relative;
-}
-
-.articles {
-    margin: 0 10%;
-}
-
-svg {
-    display: none;
-}
-
-.cart {
-    display: inline;
-}
-
-
-.close {
-    position: absolute;
-    opacity: 0.3;
-  }
-  .close:hover {
-    opacity: 1;
-  }
-  .close:before, .close:after {
-    position: absolute;
-    left: 15px;
-    content: ' ';
-    height: 33px;
-    width: 2px;
-    background-color: #333;
-  }
-  .close:before {
-    transform: rotate(45deg);
-  }
-  .close:after {
-    transform: rotate(-45deg);
-  }
-
-
 .shopping-cart {
     background-color: rgb(245,245,245);
     height: 100em;
 }
 
+
+svg {
+    display: none;
+}
+
 .table-cart {
-    @extend %font-shared-nav;
     color: rgb(170,170,170);
 }
 .table-article {
-    margin : 0px 10rem 10rem 10rem !important;
-
+    margin : 0px 10rem 10rem 10rem;
 }
+
 @media only screen and (max-width: 768px) {
 
-    svg{
-        display: inline;
+    .breadcrumb {
+        font-size: 10px;
     }
 
     .cart{
@@ -182,6 +215,35 @@ svg {
     }
 
     .cart-title {
-        font-size: xx-large;
+        font-size: 2em;
+    }
+
+    .table-article {
+        margin: 1%;
+    }
+
+    .continue-link{
+        text-decoration: none;
+    }
+    .continue {
+        border-bottom: 1px solid;
+    }
+
+    .desc {
+        font-size: 9px;
+    }
+
+    .dropdown-menu {
+        position: absolute !important;
+        left: -500% !important;
+        top: 130% !important;
+    }
+
+    .number {
+        top: 30%;
+    }
+
+    svg{
+        display: inline;
     }
 }

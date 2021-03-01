@@ -1,0 +1,46 @@
+head
+    include head.pug
+
+body 
+    include navbar.pug
+
+// Section détail d'un article
+section.container-fluid.container-lg.product-details
+
+    // Breadcrumb
+    nav(aria-label="breadcrumb")
+        ol.breadcrumb.text-uppercase.justify-content-center.my-5
+            li.breadcrumb-item
+                a.text-decoration-none.bread-text(href="#") Home
+            li.breadcrumb-item
+                a.text-decoration-none.bread-text(href="#") Plates
+            li.breadcrumb-item.active(aria-current="page") Hand painted blue flat dish
+
+    div.row
+
+        // Image de l'article
+        div.col-12.col-lg-8
+            div.w-100.h-100
+                img.w-100.h-auto(src="../../../img/hand-painted-blue-flat-dish.jpg")
+
+        // Description de l'article
+        div.col-12.col-lg-4
+            // Contenu de gestion du texte
+            div.row.text-center
+                p.col-12.my-2.article-name Kiriko
+                h1.col-12.font-weight-bold.my-4.article-name-article Hand Painted Blue Flat Dish
+                p.col-12.mt-2.mb-4.article-price $28.00
+                p.col-12.text-center.article-desc-article.pb-5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum <br> metus. In eget massa sed enim hendrerit auctor a eget <br> arcu. Curabitur ac pharetra nisl, sit amet...
+            // Contenu de gestion de commande
+            div.d-flex.my-sm-3.m-5.justify-content-center
+                .nb-article.text-center.me-1.counter
+                    span.number 1
+                div.justify-content-center
+                    button.btn.btn-quantity.d-block.mb-1.p-lg-2.p-3
+                        i.fas.fa-plus
+                    button.btn.btn-quantity.d-block.p-lg-2.p-3
+                        i.fas.fa-minus
+                // Ajout au panier
+                div.col-3.col-lg-5.p-0.h-auto.mx-3
+                    button.btn.btn-dark.w-100.h-100 Add to cart
+

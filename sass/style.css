@@ -1,11 +1,37 @@
-.article-name, .article-price, .banner-title, .cart-title {
+.banner-title, .cart-title, .article-name, .article-price, .article-name-article {
   font-family: 'Playfair Display', serif; }
 
-.banner-text, .navbar, .btn-dark, .table-cart {
+.article-cart, .banner-text, .navbar, .btn-dark, .table-cart, .bread-text {
   font-family: 'Ubuntu', sans-serif; }
 
 html {
   font-size: 90%; }
+
+.article-name, .article-price {
+  color: gray; }
+
+.articles {
+  margin: 0 10%; }
+
+.article-name, .article-desc, .article-price {
+  margin: 0.5em !important; }
+
+.article-cart {
+  color: gray; }
+
+.article-desc-article {
+  border-bottom: 1px solid #bababa;
+  margin: 0.5em !important; }
+
+.btn-dark {
+  border-radius: 0 !important;
+  font-size: small !important;
+  height: 3em;
+  width: 13em; }
+
+.btn-cart {
+  border: 1px solid black !important;
+  border-radius: 0 !important; }
 
 .banner {
   background-image: url(../img/plates-header.jpg);
@@ -15,12 +41,8 @@ html {
   background-size: 100% auto; }
 
 .btn-quantity {
-  background-color: rosybrown !important;
-  margin-bottom: 2px;
+  background-color: #bababa !important;
   border-radius: 0 !important; }
-
-.article-name, .article-desc, .article-price {
-  margin: 0.5em !important; }
 
 .banner-in {
   margin: auto;
@@ -45,12 +67,11 @@ html {
 .banner-text {
   font-size: small; }
 
-.nav-link {
-  font-weight: bold !important;
-  color: black !important; }
+.cart-title {
+  font-size: 3.5em; }
 
-.article-name, .article-price {
-  color: gray; }
+.counter {
+  width: 30% !important; }
 
 .card-top-img {
   height: 17em;
@@ -70,33 +91,8 @@ html {
 .card:hover, .middle:hover {
   opacity: 1; }
 
-.cart-title {
-  font-size: xxx-large; }
-
-.btn-dark {
-  border-radius: 0 !important;
-  font-size: small !important;
-  height: 3em;
-  width: 13em; }
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center; }
-
 .card {
   position: relative; }
-
-.articles {
-  margin: 0 10%; }
-
-svg {
-  display: none; }
 
 .cart {
   display: inline; }
@@ -122,20 +118,67 @@ svg {
 .close:after {
   transform: rotate(-45deg); }
 
+.dropdown-menu {
+  left: -250% !important;
+  margin-right: 5% !important;
+  border-radius: 0 !important; }
+
+.nav-link, .bread-text {
+  font-weight: bold !important;
+  color: black !important; }
+
+.nb-article {
+  background-color: #e8e8e8;
+  width: 100%;
+  padding: 17px; }
+
+.number {
+  position: relative;
+  top: 10%; }
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center; }
+
 .shopping-cart {
   background-color: whitesmoke;
   height: 100em; }
+
+svg {
+  display: none; }
 
 .table-cart {
   color: #aaaaaa; }
 
 .table-article {
-  margin: 0px 10rem 10rem 10rem !important; }
+  margin: 0px 10rem 10rem 10rem; }
 
 @media only screen and (max-width: 768px) {
-  svg {
-    display: inline; }
+  .breadcrumb {
+    font-size: 10px; }
   .cart {
     display: none; }
   .cart-title {
-    font-size: xx-large; } }
+    font-size: 2em; }
+  .table-article {
+    margin: 1%; }
+  .continue-link {
+    text-decoration: none; }
+  .continue {
+    border-bottom: 1px solid; }
+  .desc {
+    font-size: 9px; }
+  .dropdown-menu {
+    position: absolute !important;
+    left: -500% !important;
+    top: 130% !important; }
+  .number {
+    top: 30%; }
+  svg {
+    display: inline; } }

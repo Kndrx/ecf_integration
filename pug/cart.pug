@@ -4,13 +4,13 @@ body
     include navbar.pug
 .shopping-cart
     section.container
-        .row.mx-5.py-5.text-center
-            h1.cart-title.my-5 Shopping Cart
+        .row.mx-5.py-lg-5.py-2.text-center
+            h1.cart-title.my-lg-5 Shopping Cart
 
         // Tableau des carts
-        .bg-white.table-article.p-5
+        .bg-white.table-article.p-lg-5.p-2
             // Tête du tableau
-            .row.mx-0.my-5.py-4.border-bottom.d-none.d-lg-flex
+            .row.mx-0.my-lg-5.py-4.border-bottom.d-none.d-lg-flex
                 .col-6
                     p.table-cart.text-uppercase Product
                 .col-2.text-center
@@ -21,57 +21,58 @@ body
                     p.table-cart.text-uppercase Action
 
             // Article n°1
-            .row.mx-0.my-5.mb-lg-5.py-3.pb-lg-5.border-bottom
+            .row.mx-0.my-lg-5.mb-lg-5.py-3.pb-lg-5.border-bottom.d-flex
                 .col-12.col-lg-6
                     .row.m-0
                         // Image de l'article
                         .col-4.p-0
                             img.w-100.h-auto(src="../../../img/hand-painted-blue-flat-dish.jpg" alt="Image of hand painted blue flat dish" title="Hand painted blue flat dish")
                         // Caractéristique de l'article
-                        .col-8.pr-0
+                        .col-8.pr-0.desc
                             p.table-cart.text-uppercase Kiriko
                             p.text-uppercase Hand painted blue flat dish
                             p.table-cart.text-uppercase Color: white
-                .col-lg-2.text-center
+                .col-4.col-lg-2.mb-5.text-center
                     // Gestion des quantités
-                    div.d-flex
-                        .w-100.my-auto
-                            p 1
+                    div.d-flex.my-sm-3
+                        .nb-article.justify-content-center.me-1
+                            span 1
                         div
-                            button.btn.ml-1.btn-quantity
+                            button.btn.ml-1.btn-quantity.mb-1
                                 i.fas.fa-plus
                             button.btn.ml-1.btn-quantity
                                 i.fas.fa-minus
-                .col-7.col-lg-2.mb-5.text-right.text-lg-center
-                    p.article-price $28.00
-                .col-1.col-lg-2.mb-5.text-right.text-lg-center
+                .col-5.col-lg-2.mb-5.text-end.text-lg-center
+                    p.text-sm-end.article-price $28.00
+                .col-1.col-lg-2.mb-5.text-end.text-lg-center
                     // Action sur l'article (suppression)
                     a(href="#" class="close")
 
             // Article n°2
-            .row.mx-0.mb-5.pb-5.border-bottom
-                .col-12.col-lg-6.mb-5
+            .row.mx-0.my-lg-5.mb-lg-5.py-3.pb-lg-5.border-bottom.d-flex
+                .col-12.col-lg-6
                     .row.m-0
                         // Image de l'article
                         .col-4.p-0
                             img.w-100.h-auto(src="../../../img/mashiko-yaki-green-small-plate.jpg" alt="Image of mashiko yaki indigo small plate" title="Mashiko yaki indigo small plate")
                         // Caractéristique de l'article
-                        .col-8.pr-0
-                            p Kiriko
-                            p.article-title Mashiko yaki indigo small plate
+                        .col-8.pr-0.desc
+                            p.table-cart.text-uppercase Kiriko
+                            p.text-uppercase Hand painted blue flat dish
+                            p.table-cart.text-uppercase Color: <span (style="color:'black;'")> white </span>
                 .col-4.col-lg-2.mb-5.text-center
                     // Gestion des quantités
-                    .h-lg-50.w-50.m-lg-auto.d-flex
-                        .content-counter.w-75.text-center
-                            p.counter.justify-content-center 1
-                        .w-50
-                            button.btn.w-100.h-50.ml-1.btn-quantity
+                    div.d-flex.my-sm-3
+                        .nb-article.justify-content-center.me-1
+                            span 1
+                        div
+                            button.btn.ml-1.btn-quantity.mb-1
                                 i.fas.fa-plus
-                            button.btn.w-100.h-50.ml-1.btn-quantity
+                            button.btn.ml-1.btn-quantity
                                 i.fas.fa-minus
-                .col-7.col-lg-2.mb-5.text-right.text-lg-center
-                    p $28.00
-                .col-1.col-lg-2.mb-5.text-right.text-lg-center
+                .col-5.col-lg-2.mb-5.text-end.text-lg-center
+                    p.text-sm-end.article-price $28.00
+                .col-1.col-lg-2.mb-5.text-end.text-lg-center
                     // Action sur l'article (suppression)
                     a(href="#" class="close")
 
@@ -91,7 +92,7 @@ body
 
             // Action sur le panier
             .row.mx-0
-                .col-12.col-lg-6.mb-5.mb-lg-0.text-lg-left.continue-shop.d-flex-start.text-start
-                    a.text-dark(href="index.html") CONTINUE SHOPPING
-                .col-12.col-lg-6.mb-5.text-end.text-lg-right
-                    button.btn.btn-dark.w-50 Checkout ($56.00)
+                .col-12.col-lg-6.mb-5.mb-lg-0.text-start.text-lg-start.text-center.continue
+                    a.text-dark.continue-link(href="index.html") CONTINUE SHOPPING
+                .col-12.col-lg-6.mb-5.text-lg-end.text-center
+                    button.btn.btn-dark.w-sm-50 Checkout ($56.00)
