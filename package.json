@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "scss": "node-sass --watch sass -o sass",
-    "pug": "pug -w . -o ./pug/html -P"
+    "pug": "pug -w -o . */ -P"
   },
   "repository": {
     "type": "git",
